@@ -22,6 +22,8 @@ jobs:
     
     - name: Jekyll Builder for GitHub Pages
       uses: meitar/jekyll-builder-for-github-pages-action@v1
+      with:
+        debug: true
       
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@3.0.0
