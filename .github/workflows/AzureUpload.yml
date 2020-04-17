@@ -23,14 +23,20 @@ jobs:
     - name: Build
       uses: jerryjvl/jekyll-build-action@v1
     
+    - name: rename output folder
+      run: mv _site wwwroot
+    
+    - name: list content
+      run: ls
+    
     - name: Upload FTP     
       uses: sebastianpopp/ftp-action@releases/v2
       with:
         host: ${{ secrets.FTP_HOST }}
         user: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        localDir: "_site"
-        remoteDir: "site/wwwroot/"
+        localDir: "wwwroot"
+        remoteDir: "site"
         forceSsl: true
         
     
