@@ -1,0 +1,13 @@
+title: Github Automate Build
+email: dries.verschaeve@vddesign.be
+description: >- 
+  Testing Jekyll automated builds from Github to Azure Web App
+baseurl: "" 
+url: "https://vddesign.azurewebsites.net"
+twitter_username: driesverschaeve
+github_username:  dverschaeve
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
