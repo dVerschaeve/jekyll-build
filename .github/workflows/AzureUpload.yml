@@ -33,12 +33,13 @@ jobs:
         git add .
         git commit -m "Commit Changes" -a
     
-          
-    - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@3.0.0
+    - name: Upload FTP     
+      uses: sebastianpopp/ftp-action@releases/v2
       with:
-        ftp-server: ${{ secrets.FTP_SERVER }} 
-        ftp-username: ${{ secrets.FTP_USERNAME }} 
-        ftp-password: ${{ secrets.FTP_PASSWORD }} 
-        git-ftp-args: --all 
+        host: ${{ secrets.FTP_HOST }}
+        user: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        remoteDir: "site/wwwroot/"
+        forceSsl: true
+        
     
