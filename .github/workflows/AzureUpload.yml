@@ -29,14 +29,14 @@ jobs:
     - name: list content
       run: ls
     
-    - name: Upload FTP     
-      uses: sebastianpopp/ftp-action@releases/v2
-      with:
-        host: ${{ secrets.FTP_HOST }}
-        user: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        localDir: "wwwroot/"
-        remoteDir: "site/wwwroot/"
-        forceSsl: true
+    #- name: Upload FTP     
+    #  uses: sebastianpopp/ftp-action@releases/v2
+    #  with:
+    #    host: ${{ secrets.FTP_HOST }}
+    #    user: ${{ secrets.FTP_USERNAME }}
+    #    password: ${{ secrets.FTP_PASSWORD }}
+    #    localDir: "wwwroot/"
+    #    remoteDir: "site/wwwroot/"
+    #    forceSsl: true
         
     
